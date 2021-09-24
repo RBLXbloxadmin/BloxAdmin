@@ -46,16 +46,8 @@
            <br>
            <br>
           
-           <a href="https://www.roblox.com/library/7484507324/BloxAdmin" class="square_btn">Install</a>
-           <br>
-           <br>
-           <br>
-
-           <a href="https://github.com/RBLXbloxadmin/BloxAdmin/issues" class="square_btn4">Report Bug</a>
-           <br>
-           <br>
-           <br>
-           <a href="https://rblxbloxadmin.github.io/BloxAdmin/updates" class="square_btn" style="">View Updates</a>
+           <li><a class="links" href="https://www.roblox.com/library/7484507324/BloxAdmin" style="font-family: 'Open Sans', sans-serif; font-size: 15px; text-align: center;">Install</a></li>
+         
            <br>
            <br>
            <br>
@@ -230,7 +222,7 @@
   content: '';
   position: absolute;
   bottom: 0;
-  right: 0;
+
   width: 0;
   height: 2px;
   background-color: #0074D9;
@@ -239,9 +231,28 @@
 
 @media (hover: hover) and (pointer: fine) {
   .underline:hover::before{
-    left: 0;
+
     right: auto;
-    width: 100%;
+    width: 60px;
+  }
+}
+
+.links::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+  background-color: #0074D9;
+ transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .links:hover::before{
+
+    right: auto;
+    width: 60px;
   }
 }
 
@@ -394,6 +405,20 @@
 	text-decoration: none;
 }
 
+
+.links {
+    margin: 0;
+    padding: 0 15.5px;
+	color: #3498db;
+	text-decoration: none;
+    display: inline-block;
+    margin-top: 4px;
+    position: relative;
+    left: 560px;
+}
+
+
+
              </style>
 
 <script>
@@ -403,7 +428,7 @@ $(window).scroll(function () {
 //if you hard code, then use console
 //.log to determine when you want the 
 //nav bar to stick.  
-console.log($(window).scrollTop())
+
 if ($(window).scrollTop() > 280) {
 $('#nav_bar').addClass('navbar-fixed');
 }
