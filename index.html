@@ -15,6 +15,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="banner" style="display: none;">
+  
+  </div>
+
+  <nav id='nav_bar'>
+    <ul class='nav_links'>
+        <strong style="font-family: 'Open Sans', sans-serif; color:white; text-align: left;"> BloxAdmin |  </strong>
+      <li><a href="https://www.roblox.com/library/7484507324/BloxAdmin" class="underline" style="font-family: 'Open Sans', sans-serif; font-size: 15px;">Install</a></li>
+      <li><a href="https://github.com/RBLXbloxadmin/BloxAdmin/issues" class="underline" style="font-family: 'Open Sans', sans-serif; font-size: 15px;">Report Bug</a></li>
+      <li><a href="https://rblxbloxadmin.github.io/BloxAdmin/updates" class="underline" style="font-family: 'Open Sans', sans-serif; font-size: 15px;">Updates</a></li>
+
+    </ul>
+  </nav>
+<div id='body_div' style="display: none;">
+    
+</div>
         <div id="div1">
           <br>
           <br>
@@ -208,6 +225,31 @@
             </body>
             <style>
 
+                
+.underline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0074D9;
+ transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
                 .img{
                    width: 500px;
                    position: relative;
@@ -224,7 +266,7 @@
     text-align: center;
     align-items: center;
     position:relative;
-   
+    left: 500px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -239,6 +281,7 @@
     text-align: center;
     align-items: center;
     position:relative;
+    left: 500px;
     
     font-family: 'Open Sans', sans-serif;
 }
@@ -255,7 +298,7 @@
     align-items: center;
     position:relative;
     bottom: 300px;
-  
+    left: 500px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -270,7 +313,7 @@
     text-align: center;
     align-items: center;
     position:relative;
-  
+    left: 500px;
 
     font-family: 'Open Sans', sans-serif;
 }
@@ -301,3 +344,72 @@
                     background-image: url("https://images.pexels.com/photos/1146134/pexels-photo-1146134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
                  
                 }
+
+                html, body {
+	height: 4000px;
+}
+
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  position: fixed;
+    width: 100%;
+}
+
+#body_div {
+	top: 0;
+	position: relative;
+    height: 200px;
+    background-color: green;
+}
+
+#banner {
+	width: 100%;
+	height: 273px;
+    background-color: gray;
+	overflow: hidden;
+}
+
+#nav_bar {
+	border: 0;
+	background-color: #202020;
+	border-radius: 0px;
+	margin-bottom: 0;
+    height: 30px;
+
+  
+}
+
+.nav_links {
+    margin: 0;
+}
+
+.nav_links li {
+	display: inline-block;
+    margin-top: 4px;
+}
+.nav_links li a {
+	padding: 0 15.5px;
+	color: #3498db;
+	text-decoration: none;
+}
+
+             </style>
+
+<script>
+    $(document).ready(function() {
+
+$(window).scroll(function () {
+//if you hard code, then use console
+//.log to determine when you want the 
+//nav bar to stick.  
+console.log($(window).scrollTop())
+if ($(window).scrollTop() > 280) {
+$('#nav_bar').addClass('navbar-fixed');
+}
+if ($(window).scrollTop() < 281) {
+$('#nav_bar').removeClass('navbar-fixed');
+}
+});
+});
+</script>
