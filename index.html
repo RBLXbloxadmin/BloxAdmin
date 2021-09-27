@@ -6,15 +6,17 @@
     <body>
        
         <div class="d-flex justify-content-center mt-5 h-100" id="cookies">
-            <div class="d-flex align-items-center align-self-center card p-3 text-center cookies"><span class="mt-2" style="">We use third party cookies to make your experience better.</span>   <a href="#" style="font-family: 'Open Sans', sans-serif;" onclick="acceptcookies()">Ok</a> </div>
+            <div class="d-flex align-items-center align-self-center card p-3 text-center cookies"><span class="mt-2" style="">We use third party cookies to make your experience better.</span>   <a href="#" style="" onclick="acceptcookies()">Ok</a> </div>
         </div>
  
        
-<div id="banner" style="display: none;">
-  
-  </div>
 
-  <div class="info">
+  <div id="note" style="display: none;">
+    The home page is not working right, we'll fix it
+    <a href="https://github.com/RBLXbloxadmin/BloxAdmin/issues/3"> Read more </a>
+</div>
+
+  <div class="info" style="display: none;">
     <p><strong>Read | </strong> Our users could not use the website because we was updating it </p> <a href="https://github.com/RBLXbloxadmin/BloxAdmin/issues/3"> Read more </a>
     
   </div>
@@ -26,10 +28,26 @@
         <strong style=" color:white; text-align: left;"> BloxAdmin |  </strong>
       <li><a href="https://www.roblox.com/library/7484507324/BloxAdmin" class="underline" style=" font-size: 15px;">Install</a></li>
       <li><a href="https://github.com/RBLXbloxadmin/BloxAdmin/issues" class="underline" style=" font-size: 15px;">Report Bug</a></li>
+      <li><a href="https://github.com/RBLXbloxadmin/BloxAdmin/wiki" class="underline" style=" font-size: 15px;">Wiki</a></li>
+      <strong style=" color:white; text-align: left;"> Others | </strong>
       <li><a href="games.html" class="underline" style=" font-size: 15px;">Owner Games</a></li>
      
     </ul>
   </nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="banner" style="background-color: white; background-image: url(https://images.pexels.com/photos/574073/pexels-photo-574073.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+    <h1  style=" color:white; text-align: center; font-size: 50px;   position: relative; ">New Wiki Page</h1>
+    <br>
+    
+    <p style="color:white; text-align: center;">Learn how to use BloxAdmin and more!</p>
+    <br>
+    <li><a href="https://github.com/RBLXbloxadmin/BloxAdmin/wiki" class="links" style=" font-size: 15px;">Go to Wiki</a></li>
+</div>
 
         <div id="div1">
           <br>
@@ -240,7 +258,22 @@
             </div>
             </body>
             <style>
-      
+      #note {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    text-align: center;
+    line-height: 2.5;
+position: sticky;
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow:    0 0 5px black;
+    box-shadow:         0 0 5px black;
+    height: 50px;
+}
+
       .info {
   background-color: #e7f3fe;
   border-left: 6px solid #2196F3;
